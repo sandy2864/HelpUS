@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'sz)7nbxe5m31+wnj95jwgaa(+e+52j1gr24)91e0@n$io@rf_y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['helpp-us.herokuapp.com/', '127.0.0.1']
 
@@ -124,7 +124,4 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles")
 STATIC_URL = '/static/'
 MEDIA_URL="/media/"
-STATICFILES_DIRS=[
-    os.path.join(BASE_DIR,"static")
-]
 MEDIA_ROOT=os.path.join(BASE_DIR,"media/")
