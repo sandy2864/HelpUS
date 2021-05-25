@@ -4,4 +4,4 @@ admin.site.register(Location)
 
 admin.site.register(Image)
 
-Register your models here.
+
