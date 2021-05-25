@@ -29,6 +29,6 @@ urlpatterns = [
     path('',home),
     path('upload/',upload),
     # path("",views.upload),
-]+urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+]+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
 
     
