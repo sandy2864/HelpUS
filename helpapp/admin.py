@@ -1,10 +1,7 @@
 from django.contrib import admin
-from .models import *
+from .models import Location,Image
 admin.site.register(Location)
 
 admin.site.register(Image)
 
 # Register your models here.
-# @admin.register(Upload)
-# class UploadAdmin(admin.ModelAdmin):
-#     list_display=['id','photo']
