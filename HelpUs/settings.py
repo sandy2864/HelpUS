@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'sz)7nbxe5m31+wnj95jwgaa(+e+52j1gr24)91e0@n$io@rf_y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['help-us.herokuapp.com']
 
@@ -122,6 +122,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 MEDIA_URL="/media/"
-MEDIA_ROOT=os.path.join(BASE_DIR,"media/images/")
-
+MEDIA_ROOT=os.path.join(BASE_DIR,"media/")
+if settings.DEBUG:
+    urlpatterns += patterns('',
+        (r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+        'document_root': settings.MEDIA_ROOT}))
 
